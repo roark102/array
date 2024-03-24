@@ -159,6 +159,39 @@ function firstPrime() {
 document.querySelector("#firstPrime").onclick = function () {
   firstPrime();
 };
+// Bài 9
+var arrNumber2 = [];
+document.querySelector("#array2").innerHTML = arrNumber2;
+function hanldeAdd2() {
+  var number = document.querySelector("#themSo2").value;
+
+  arrNumber2.push(number);
+
+  document.querySelector("#array2").innerHTML = arrNumber2;
+}
+
+document.querySelector("#hanldeAdd2").onclick = function () {
+  hanldeAdd2();
+};
+function isInteger(num) {
+  return num % 1 === 0;
+}
+
+function integerNumber() {
+  var totalInteger = 0;
+  for (var i = 0; i < arrNumber2.length; i++) {
+    if (isInteger(arrNumber2[i])) {
+      totalInteger += 1;
+    }
+  }
+  document.querySelector(
+    "#result9"
+  ).innerHTML = `Có ${totalInteger} số nguyên trong mảng `;
+}
+
+document.querySelector("#integerNumber").onclick = function () {
+  integerNumber();
+};
 
 // Bài 10:
 
